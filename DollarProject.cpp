@@ -1,3 +1,8 @@
 #include<iostream>
 #include<cstdlib>
-#include<
+#include<cstream>
+using namespace std;
+int main()
+{
+  
+}
