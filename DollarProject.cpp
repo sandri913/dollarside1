@@ -14,3 +14,9 @@ int main()
 {
   return 0;
 }
+int saldo()
+{
+  //visualizzare il saldo,inserire un pop up che ti porta al programma mercato per aumentare oppure negozio(home)
+  return 0;
+  
+}
