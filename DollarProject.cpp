@@ -60,27 +60,8 @@ switch(risposta1)
   break;
   default:
   risposta1<1||risposta>7
- 
- 
- 
- saldo();
- mercato();
- traders();
- prelievo();
- lavori();
- Shop();
- deposito();
-     
-                                                                                                              
-                                                                                                              
-                                                                                                              
-                                                                                                              
-                                                                                                              
-                                                                                                              
-                                                                                                              
-                                                                                                              
-                                                                                                              
-  return 0;
+  break;
+ return 0;
 }
 int saldo()
 {
