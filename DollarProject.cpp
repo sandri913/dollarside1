@@ -1,6 +1,6 @@
 #include<iostream>
 #include<cstdlib>
-#include<cstream>
+#include<sstream>
 using namespace std;
 
 int saldo();
@@ -34,6 +34,9 @@ int main()
  cout<<"3) traders     ";
  cout<<"4) Prelievo    ";
  cout<<"5) Lavori      ";
+ cout<<"6) Shop        ";
+ cout<<"7) Deposito    ";
+ 
  
  
  
