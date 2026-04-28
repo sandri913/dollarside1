@@ -84,6 +84,12 @@ switch(risposta1)
 }
 int saldo()
 {
+cout<<"\n     __     ____             _    __   ";
+cout<<"\n ___/ /__  / / /__ ________ (_)__/ /__ ";
+cout<<"\n/ _  / _ \/ / / _ `/ __(_-</ / _  / -_)";
+cout<<"\n\_,_/\___/_/_/\_,_/_/ /___/_/\_,_/\__/ ";                                       
+  cout<<"\nBuongiorno!";
+  cout<<"\nil tuo saldo attuale e' di"
   //visualizzare il saldo,inserire un pop up che ti porta al programma mercato per aumentare oppure negozio(home)
   return 0;
   
