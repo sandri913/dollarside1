@@ -11,7 +11,7 @@ int Shop();
 int deposito();
 
 int main()
-{
+{ cout<<"\n1)CREA ACCOUNT\n";
 
   return 0;
 }
