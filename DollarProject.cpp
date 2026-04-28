@@ -12,6 +12,7 @@ int Shop();
 int deposito();
 string password;
 string nu;
+int risposta1;
 
 int main()
 {
@@ -20,20 +21,7 @@ cout<<"\n/\  __-.  /\  __ \   /\ \       /\ \       /\  __ \   /\  == \   /\  __
 cout<<"\n\ \ \/\ \ \ \ \/\ \  \ \ \____  \ \ \____  \ \  __ \  \ \  __<   \ \___  \  \ \ \  \ \ \/\ \ \ \  __\";   
 cout<<"\n \ \____-  \ \_____\  \ \_____\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \/\_____\  \ \_\  \ \____-  \ \_____\"; 
 cout<<"\n  \/____/   \/_____/   \/_____/   \/_____/   \/_/\/_/   \/_/ /_/   \/_____/   \/_/   \/____/   \/_____/"; 
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
+                                                                                                     
  cout<<"\nScrivi la Password (solo con lettere)\n";
  cin>>password;
  cout<<"\nScrivi nome utente (senza spazi)\n";
@@ -47,7 +35,31 @@ cout<<"\n  \/____/   \/_____/   \/_____/   \/_____/   \/_/\/_/   \/_/ /_/   \/__
  cout<<"5) Lavori      ";
  cout<<"6) Shop        ";
  cout<<"7) Deposito    ";
- 
+switch(risposta1)
+{
+  case 1:
+  saldo();
+  break;
+  case 2:
+  mercato();
+  break;
+  case 3:
+  traders();
+  break;
+  case 4:
+  prelievo();
+  break;
+  case 5:
+  lavori();
+  break;
+  case 6:
+  Shop();
+  break;
+  case 7:
+  deposito();
+  break;
+  default:
+  risposta1<1||risposta>7
  
  
  
