@@ -47,6 +47,7 @@ switch(s)
 {
 	case 1:
 		cout<<"hai scelto il saldo!";
+		saldo();
 	break;
 	case 2:
 		cout<<"hai scelto il mercato!";
@@ -71,4 +72,16 @@ switch(s)
 }
 
 return 0;
+}
+int saldo()
+{
+	system("cls");
+	cout<<"\nBenvenuti nella sezione saldo.";
+	cout<<"\n\n\n\n";
+	float saldor;
+	srand(time(0));
+	saldor=rand()%999999+1;
+    cout<<"Il tuo slado attuale e' di:"<<saldor;
+	return 0;
+	
 }
