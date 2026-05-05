@@ -175,6 +175,31 @@ int mercato()
 }
 int traders()
 {
+	int traders()
+{
+	cout<<"\nBenvenuto nella sezione traders!";
+	cout<<"\n in questa sezione potrai scegliere tra molti traders esperti";
+	cout<<"\n===========================================================================";
+	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
+	cout<<"\n|*************************************************************************|";
+	cout<<"\n|  TRADER NUM1______________                                              |";
+	cout<<"\n|         | Dr. Aris Thorne |                                             |";
+	cout<<"\n|          Ex Astro fisico che ha applicato le sue conoscienze            |";
+	cout<<"\n|            nei grafici.E' un nostro trader che punta in alto            |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|*************************************************************************|";	
+	cout<<"\n|                                                                         |";
+	cout<<"\n===========================================================================";	
+	return 0;
+}
 	return 0;
 }
 int prelievo()
