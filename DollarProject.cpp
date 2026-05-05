@@ -93,7 +93,84 @@ int saldo()
 	
 }
 int mercato()
-{
+{  cout<<"Abbiamo tre prodotti su cui dovrai posare una certa somma di soldi e ricavarcene (se riesci), attenzione non sempre i soldi saliranno in positivo, ma anche scenderanno in negativo.";
+	cout<<"\n=========================================================";
+	cout<<"\n|$DOLLARSIDE$----> MERCATO1                             |";
+	cout<<"\n|*******************************************************|";
+	cout<<"\n|                  |     |                              |";
+	cout<<"\n|                 |      |  |                           |";
+	cout<<"\n|                |       | | ||||||                     |";
+	cout<<"\n|               |         |         |                   |";
+	cout<<"\n|              |                      |                 |";
+	cout<<"\n|         |   |                         |               |";
+	cout<<"\n|        | | |                           |              |";
+	cout<<"\n|       |   |                            |              |";
+	cout<<"\n|       |                                |              |";
+	cout<<"\n|      |                                 |              |";
+	cout<<"\n|    |                                   |     | | | | ||";
+	cout<<"\n|  |                                     |   |          |";
+	cout<<"\n|                                         | |           |";
+	cout<<"\n|*******************************************************|";
+	cout<<"\n|Caratteristiche: Moltiplicatore vincita 1.25x          |";           
+	cout<<"\n=========================================================\n\n\n\n";
+	cout<<"\n=========================================================";
+	cout<<"\n|$DOLLARSIDE$----> MERCATO2                             |";
+	cout<<"\n|*******************************************************|";
+	cout<<"\n| |                                                     |";
+	cout<<"\n|   |                                                   |";
+	cout<<"\n|    |                                                  |";
+	cout<<"\n|     |                                                 |";
+	cout<<"\n|      |                                                |";
+	cout<<"\n|      |                                                |";
+	cout<<"\n|       |                                               |";
+	cout<<"\n|       |                              |                |";
+	cout<<"\n|        |                            |  |              |";
+	cout<<"\n|        |                           |   |              |";
+	cout<<"\n|         | | | |  | |  || |  | | | |     | |  |        |";
+	cout<<"\n|                                               | |     |";
+	cout<<"\n|                                                   | | |";
+	cout<<"\n|*******************************************************|";
+	cout<<"\n|Caratteristiche: Moltiplicatore vincita 10.5x          |";           
+	cout<<"\n=========================================================\n\n\n\n";
+	cout<<"\n=========================================================";
+	cout<<"\n|$DOLLARSIDE$----> MERCATO3                             |";
+	cout<<"\n|*******************************************************|";
+	cout<<"\n|                                                       |";
+	cout<<"\n|                                                       |";
+	cout<<"\n|                                                       |";
+	cout<<"\n|               | |                                     |";
+	cout<<"\n|              |   |                                    |";
+	cout<<"\n|         |   |      |                                | |";
+	cout<<"\n|        | | |        |                              |  |";
+	cout<<"\n|       |   |         |                            |    |";
+	cout<<"\n|       |              |                           |    |";
+	cout<<"\n|      |                | |                  | | |      |";
+	cout<<"\n|    |                      ||           |              |";
+	cout<<"\n|  |                         |          |               |";
+	cout<<"\n|                              |       |                |";
+	cout<<"\n|*******************************************************|";
+	cout<<"\n|Caratteristiche: Moltiplicatore vincita 2.5x          |";           
+	cout<<"\n=========================================================\n";
+	cout<<"\n\n\n\n\n\n";
+	cin>>merc;
+	while(merc!=1 && merc!=2 && merc!=3)
+	{
+		cout<<"correggiti,quello che hai inserito non esiste.";
+		cin>>merc;
+	}
+	if(merc==1)
+	{
+		float soldiinserire;
+		cout<<"Bene, non ami il rischio, haiscelto bene, pochi guadagbi ma poche perdite.";
+		cout<<"Inserisci quanti soldi vuoi inserire:";
+		cin>>soldiinserire;
+		float percentuale;
+	    srand(time(0));
+	    percentuale=rand()%99+1;
+	    if(saldor<75)
+	    {
+	    	
+		}
 	return 0;
 }
 int traders()
