@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<cstdlib>
 #include<sstream>
@@ -51,21 +52,27 @@ switch(s)
 	break;
 	case 2:
 		cout<<"hai scelto il mercato!";
+		mercato();
 	break;
 	case 3:
 		cout<<"hai scelto i traders!";
+		traders();
 	break;
 	case 4:
 		cout<<"hai scelto il prelievo!";
+		prelievo();
 	break;
 	case 5:
 		cout<<"hai scelto i lavori!";
+		lavori();
 	break;
 	case 6:
 		cout<<"hai scelto lo shop!";
+		Shop();
 	break;
 	case 7:
 		cout<<"hai scelto il deposito!";
+		deposito();
 	break;
 	default:
 	break;	
@@ -84,4 +91,28 @@ int saldo()
     cout<<"Il tuo slado attuale e' di:"<<saldor;
 	return 0;
 	
+}
+int mercato()
+{
+	return 0;
+}
+int traders()
+{
+	return 0;
+}
+int prelievo()
+{
+	return 0;
+}
+int lavori()
+{
+	return 0;
+}
+int Shop()
+{
+	return 0;	
+}
+int deposito()
+{
+	return 0;
 }
