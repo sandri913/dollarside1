@@ -18,6 +18,7 @@ string nu1;
 string ncarta1;
 int risposta1;
 float saldovirtuale;
+float saldor;
 
 int main()
 {
@@ -30,7 +31,7 @@ int main()
  cin>>ncarta1;
  system("cls");
 
-	float saldor;
+	
 	srand(time(0));
 	saldor=rand()%999999+1;
  cout<<"\nBenvenuti al menu,grazie di averci supportato...\n";
@@ -96,10 +97,10 @@ int saldo()
 	cout<<"\n\n\n\n";
     cout<<"Il tuo slado attuale e' di:"<<saldo;
 	cout<<saldo;
-	cout<<"\n  vuoi guadagnare di piu's|n (vai nella zo)";
+	cout<<"\n  vuoi guadagnare di piu's|n (vai nella zona traders)";
 	cin>>s;
 	if(s=='s')
-		{   
+{   
  traders();
 }
 else
@@ -174,8 +175,15 @@ int merc;
 		string contattare;
 		cout<<"Bene, non ami il rischio, hai scelto bene, pochi guadagni ma poche perdite.\n";
 		cout<<"Inserisci quanti soldi vuoi:";
+		if(soldiinserire>saldor)
+	    {
+	    	cout<<"Attenzione non disponi di questa cifra";
+		}
+		else
+		{
+	
 		cin>>soldiinserire;
-		//saldo=saldo-soldiinserire;
+		//saldor=saldor-soldiinserire;
 		float percentuale;
 	    srand(time(0));
 	    percentuale=rand()%99+1;
@@ -224,7 +232,7 @@ int merc;
             	cout<<"\nerrore controlla la carta\n";
             	cin>>ncarta2;
 			}
-			//saldo=saldo+soldiinserire;
+			//saldor=saldo+soldiinserire;
 			//cout<<"SALDO="<<
 		  }
 	    }
@@ -232,9 +240,9 @@ int merc;
 	    {
 	    	cout<<"\nI soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
 	    	soldiinserire=soldiinserire-soldiinserire*0,67;
-	    	//saldo=saldo+soldiinserire;
+	    	//saldor=saldor+soldiinserire;
 	}	
-	
+		}
 }
 return 0;
 }
@@ -395,3 +403,4 @@ int deposito()
 {
 	return 0;
 }
+//correggi eroore dell 11 saldo e controlla l if che guarda i soldi se sono sopra al saldo non puoi scommettere nella sezione mercato
