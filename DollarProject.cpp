@@ -433,18 +433,24 @@ while(card!="bronze"&& card!="platinum"&& card!="gold")
 if(card=="bronze")
 {
 	cout<<"hai scelto la bronze card,";
+	saldor=saldor-50;
+	cout<<"il tuo saldo dopo il pagamento e di";cout<<saldor;
 }
 else
 {
 	if(card=="platinum")
 	{
 		cout<<"hai scelto la platinum card";
+		saldor=saldor-230;
+		cout<<"il tuo saldo dopo il pagamento e di";cout<<saldor;
 	}
 	else
 	{
 		if(card=="gold")
 		{
 			cout<<"hai scelto la gold card";
+			saldor=saldor-890;
+				cout<<"il tuo saldo dopo il pagamento e di";cout<<saldor;
 		}
 	}
 }
@@ -454,4 +460,5 @@ int deposito()
 {
 	return 0;
 }
-//correggi eroore dell 11 saldo e controlla l if che guarda i soldi se sono sopra al saldo 
+//correggi eroore dell 11 saldo e controlla l if che guarda i soldi se sono sopra al saldo
+//_sleep (1000 )
