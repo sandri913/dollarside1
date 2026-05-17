@@ -6,6 +6,8 @@
 using namespace std;
 
 int s;
+int curricolum();
+int menu();
 int saldo();
 int mercato();
 int traders();
@@ -22,6 +24,7 @@ float saldor;
 
 int main()
 {
+	char s;
  system ("color F0");
  cout<<"______________________________________________________________________________________________________________________________________________________________   \n";
  cout<<"|                                                                                                                                                             |  \n";
@@ -56,7 +59,13 @@ int main()
 	cin.ignore();
 	srand(time(0));
 	saldor=rand()%999+1;
- cout<<"\nBenvenuti al menu,grazie di averci supportato...\n";
+	menu();
+	return 0;
+}
+int menu()
+{
+
+cout<<"\nBenvenuti al menu,grazie di averci supportato...\n";
  cout<<"\n1) Saldo       ";
  cout<<"\n2) Mercato     ";
  cout<<"\n3) traders     ";
@@ -121,14 +130,38 @@ int saldo()
 	cout<<saldor;
 	cout<<"\n  vuoi guadagnare di piu's|n (vai nella zona traders)";
 	cin>>s;
-	if(s=='s')
-{   
- traders();
+		while(s!='s' && s!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>s;
+	}
+if(s=='s')
+{
+	traders();
 }
 else
 {
-	cout<<"\nerrore";
+	cout<<"\n vuoi andare nel menu principale?(s|n)";
+	cin>>s;
+			while(s!='s' && s!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>s;
+	}
+	if(s=='s')
+	{
+	  menu();
+	}
+	else
+	{
+
+	cout<<"\n arrivederci,alla prossima!";
+	}
+	
 }
+
+	
+
 return 0;
 }
 	
@@ -136,6 +169,7 @@ return 0;
 
 int mercato()
 {
+char s;
 float saldom; 
 int merc;
  cout<<"Abbiamo tre prodotti su cui dovrai posare una certa somma di soldi e ricavarcene (se riesci), attenzione non sempre i soldi saliranno in positivo, ma anche scenderanno in negativo.";
@@ -267,12 +301,28 @@ int merc;
 	    	saldor=saldor+soldiinserire;
 	}	
 		}
+	cout<<"\n vuoi andare nel menu principale?(s|n)";
+	cin>>s;
+			while(s!='s' && s!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>s;
+	}
+	if(s=='s')
+	{
+	  menu();
+	}
+	else
+	{
+
+	cout<<"\n arrivederci,alla prossima!";
+	}
 }
 return 0;
 }
 	int traders()
 {   
-{   
+char sm;
 int s;
 int q;
 int t;
@@ -341,6 +391,7 @@ float tss;
 	cout<<"\n|*************************************************************************|";	
 	cout<<"\n|  guadagno stimato--->20%                     costo=15% del guadagno     |";
 	cout<<"\n===========================================================================\n\n\n";
+	cout<<"inserisci il numero del trader che vuoi usare";
 	cin>>s;
 	while(s!=1 && s!=2 && s!=3)
 	{
@@ -355,6 +406,8 @@ float tss;
 		int t(q*10/100);
 		float ts(t+q);
 		cout<<"\nDr. Aris Thorne e riuscito a fare "<<ts<<"euro, si e' gia' preso la sua parte";
+		float saldor=saldor-ts;
+		cout<<"\n ora nel conto hai"<<saldor;
 		
 		
 		
@@ -368,7 +421,9 @@ float tss;
 		cin>>q;
 		int t(q*20/100);
 		float ts(t+q);
-		cout<<"\nDr.Viktor  Volkov e riuscito a fare "<<ts<<"euro, si e' gia' preso la sua parte";
+		cout<<"\nViktor  Volkov e riuscito a fare "<<ts<<"euro, si e' gia' preso la sua parte";
+				float saldor=saldor-ts;
+		cout<<"\n ora nel conto hai"<<saldor;
 	}
 	else
 	{
@@ -376,17 +431,31 @@ float tss;
 		{
 		
 	cout<<"\nhai scelto una garanzia!";
-		cout<<"\n Viktor  Volkov sta lavorando per te... inserisci la quota che vuoi";
+		cout<<"\n Elara  Vance sta lavorando per te... inserisci la quota che vuoi";
 		cin>>q;
 		int t(q*5/100);
 		float ts(t+q);
-		cout<<"\nDr.Viktor  Volkov e riuscito a fare "<<ts<<"euro, si e' gia' preso la sua parte";	
+		cout<<"\nElara  Vance e riuscito a fare "<<ts<<"euro, si e' gia' preso la sua parte";
+		float saldor=saldor-ts;
+		cout<<"\n ora nel conto hai"<<saldor;	
 	}
 	}
 }
-	return 0;
-	
-}	
+	cout<<"\n vuoi andare nel menu principale?(s|n)";
+	cin>>sm;		while(sm!='s' && sm!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>sm;
+	}
+	if(sm=='s')
+	{
+	  menu();
+	}
+	else
+	{
+
+	cout<<"\n arrivederci,alla prossima!";
+	}	
 	return 0;
 }
 	
@@ -397,11 +466,73 @@ int prelievo()
 }
 int lavori()
 {
+char s;
+int sl;
+char c;
+cout<<"\n===============================================================================================================================|";
+	cout<<"\n|$DOLLARSIDE$---->lavori                                                                                                   |";
+	cout<<"\n|**************************************************************************************************************************|";
+	cout<<"\n|_______________le nostre proposte in evidenzia (se ti interressa inserisci il numero altrimenti inserisci 4)______________|";
+	cout<<"\n|lavoro num1                     | lavoro num2                          |lavoro num3                                       |";
+	cout<<"\n| sarai un magazziniere nella    | sarai un meccanico per le moto presso| sarai un dipendente per il negozio cipside       |";
+	cout<<"\n| azienda robotmaster,lavori 6   | l'officina di alfredo motorparts     | lavori 5 giorni su 7,6 ore al giorno             |";
+	cout<<"\n| giorni su 7, 6 ore al giorno   | lavori 5 giorni su 7,8 ore al giorno | hai una pausa dopo 4 ore                         |";
+	cout<<"\n| hai una pausa dopo 3 ore       | hai una pausa ogni 3 ore             | la tua paga stimata sara' di 1600 al mese        |";
+	cout<<"\n| la tua paga stimata sara' di   | la tua paga stimata sara di 2000 al  |                                                  |";
+	cout<<"\n| 1800 al mese.                  |  mese                                |                                                  |";
+	cout<<"\n|                                |                                      |                                                  |";
+	cout<<"\n|                                |                                      |                                                  |";
+	cout<<"\n|                                |                                      |                                                  |";
+	cout<<"\n|                                |                                      |                                                  |";
+	cout<<"\n|                                |                                      |                                                  |";
+	cout<<"\n|**************************************************************************************************************************|";	
+	cout<<"\n|                                |                                      |                                                  |";
+	cout<<"\n===========================================================================================================================|";
+    cout<<"\n|  inserisci il numero del lavoro che ti interessa altrimenti inserisci 4 per una ricerca approfondita--->";cin>>sl;
+    cout<<"\n===========================================================================================================================|\n\n\n";
+	
+
+	if(sl==1)
+	{
+		cout<<"\nLavorerai in robotmaster complimenti!";
+		cout<<"\n ecco l'email per prenotare un colloquio e per portare il curriculum";
+		cout<<"\n robotmastercolloquio@gmail.com";
+		cout<<"\n non hai il curriculum? dicita c per farlo gratuitamente con il nostro software!";
+		cout<<"\n altrimenti dicita n";
+		cin>>c;
+		while(c!='c' || c!='c')
+		{
+			cout<<"\n errore, inserisci la scelta corretta";
+			cin>>c;
+		}
+		if(c=='c')
+		{
+			curricolum();
+		}
+		
+	}
+	
+		cout<<"\n vuoi andare nel menu principale?(s|n)";
+	cin>>s;
+			while(s!='s' && s!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>s;
+	}
+	if(s=='s')
+	{
+	  menu();
+	}
+	else
+	{
+
+	cout<<"\n arrivederci,alla prossima!";
+	}
 	return 0;
 }
 int Shop()
 {
-
+char s;
 	string card;
 		cout<<"benvenuto nella sezione shop!!";
 	cout<<"\n===========================================================================================================================|";
@@ -454,11 +585,65 @@ else
 		}
 	}
 }
+	cout<<"\n vuoi andare nel menu principale?(s|n)";
+	cin>>s;
+			while(s!='s' && s!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>s;
+	}
+	if(s=='s')
+	{
+	  menu();
+	}
+	else
+	{
+
+	cout<<"\n arrivederci,alla prossima!";
+	}
 	return 0;	
 }
 int deposito()
 {
 	return 0;
 }
-//correggi eroore dell 11 saldo e controlla l if che guarda i soldi se sono sopra al saldo
-//_sleep (1000 )
+
+int curricolum()
+{
+	char s;
+	string n;
+	string l;
+	string n2;
+			cout<<"\nhai scelto di crearlo con il nostro software!";
+			cout<<"\n iniziamo!";
+			cout<<"\n inserisci il tuo nome(senza spazi)";
+			cin>>n;
+			cout<<"\n hai un secondo nome(s) altrimenti n";
+			cin>>s;
+			while(s!='s'|| s!='n')
+			{
+				cout<<"\n errore, inserisci s o n";
+				cin>>s;
+			}
+			if(s=='s')
+			{
+				cout<<"inserisci il secondo nome";
+				cin>>n2;
+			}
+			 
+			cout<<"\n Inserisci se hai una laurea(l) altrimenti se hai un diploma delle scuole superiori(d)";
+			cin>>s;
+			while(s!='l'||s!='d')
+			{
+				cout<<"errore,inserci una scelta corretta";
+				cin>>s;
+			}
+			if(s='l')
+			{
+				cout<<"in cosa sei laureato?";
+				cin>>l;
+				cout<<"laurea--"<<l;
+			}			
+			
+	return 0;
+}
