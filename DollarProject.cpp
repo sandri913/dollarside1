@@ -136,3 +136,42 @@ cout<<"\n=======================================================================
 	}
 	return 0;
 }
+//animazione riga
+ 	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					_sleep(1000);
+	  					 system("cls");
+	  					 cout<<"\n        000";
+	  					 cout<<"\n  000  0   0 000 ";
+	  					 cout<<"\n 0   0  000 0   0";
+	  					 cout<<"\n  000        000";
+	  					 _sleep(1000);
+	  					 system("cls");
+	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					_sleep(1000);
+	  					 system("cls");
+	  					 cout<<"\n        000";
+	  					 cout<<"\n  000  0   0 000 ";
+	  					 cout<<"\n 0   0  000 0   0";
+	  					 cout<<"\n  000        000";
+ 	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					_sleep(1000);
+	  					 system("cls");
+	  					 cout<<"\n        000";
+	  					 cout<<"\n  000  0   0 000 ";
+	  					 cout<<"\n 0   0  000 0   0";
+	  					 cout<<"\n  000        000";
+	  					 _sleep(1000);
+	  					 system("cls");
+	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
