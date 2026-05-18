@@ -22,6 +22,10 @@ int risposta1;
 float saldovirtuale;
 float saldor;
 float saldonow;
+string password2;
+		string nu2;
+		string ncarta2;
+		float soldiinserire;
 //float trt;
 
 int main()
@@ -171,7 +175,7 @@ return 0;
 int saldo()
 {
 
-	char s;
+	
 	                    cout<<"\n  000        000";
 	  					cout<<"\n 0   0  000 0   0";
 	  					cout<<"\n  000  0   0 000";
@@ -213,6 +217,51 @@ int saldo()
 	  					cout<<"\n  000  0   0 000";
 	  					cout<<"\n        000";
 	  					system("cls");
+	  						char s;
+	char p;
+	system("cls");
+	cout<<"\nBenvenuti nella sezione saldo.";
+	cout<<"\n\n\n\n";
+    
+    cout<<"\nsaldo normale:"<<saldor;
+    cout<<"\nsaldo virtuale:"<<saldovirtuale;
+    cout<<"\nvuoi risquotere i soldi virtuali?s|n";
+    cin>> p;
+    	while(p!='s' && p!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>p;
+	}
+	if(p=='s')
+    {
+    	cout<<"\nVolendoli riscattare devi inserire i dati del tuo account";
+	      	cout<<"\nScrivi la Password (solo con lettere)\n";
+            cin>>password2;
+            while(password1!=password2)
+            {
+            	cout<<"\nerrore controlla la password\n";
+            	cin>>password2;
+			}
+            cout<<"\nScrivi nome utente (senza spazi)\n";
+            cin>>nu2;
+            while(nu1!=nu2)
+            {
+            	cout<<"\nerrore controlla il nome\n";
+            	cin>>nu2;
+			}
+            cout<<"\nInserisci il numero carta che userai per i soldi(tutto attaccato)\n";
+            cin>>ncarta2;
+            while(ncarta1!=ncarta2)
+            {
+            	cout<<"\nerrore controlla la carta\n";
+            	cin>>ncarta2;
+			}
+			cout<<"Bene grazie di averci scelto.";
+			
+			saldor=saldor+soldiinserire;
+			cout<<"SALDO="<<saldor;
+    	
+    }
 	cout<<"\nBenvenuti nella sezione saldo.";
 	cout<<"\n\n\n\n";
     
@@ -353,14 +402,12 @@ cout<<"\n  000        000";
 	}
 	if(merc==1)
 	{
-		string password2;
-		string nu2;
-		string ncarta2;
+		
 		system("cls");
-		float soldiinserire;
+		
 		string contattare;
 		cout<<"Bene, non ami il rischio, hai scelto bene, pochi guadagni ma poche perdite.\n";
-		cout<<"Inserisci quanti soldi vuoi:";
+		cout<<"Inserisci soldi:";
 		cin>>soldiinserire;
 		while(soldiinserire>saldor)
 	    {
@@ -449,14 +496,12 @@ cout<<"\n  000        000";
 
      if(merc==2)
 	{
-		string password2;
-		string nu2;
-		string ncarta2;
+		
 		system("cls");
-		float soldiinserire;
+		
 		string contattare;
 		cout<<"Sei un amante del rischio vedo... Attento\n";
-		cout<<"Inserisci quanti soldi vuoi:";
+		cout<<"Inserisci soldi:";
 		if(soldiinserire>saldor)
 	    {
 	    	cout<<"Attenzione non disponi di questa cifra";
@@ -546,14 +591,12 @@ cout<<"\n  000        000";
 }
 	if(merc==3)
 	{
-		string password2;
-		string nu2;
-		string ncarta2;
+		
 		system("cls");
-		float soldiinserire;
+		
 		string contattare;
 		cout<<"Bene, non ami il rischio, hai scelto bene, pochi guadagni ma poche perdite.\n";
-		cout<<"Inserisci quanti soldi vuoi:";
+		cout<<"Inserisci soldi:";
 		cin>>soldiinserire;
 		while(soldiinserire>saldor)
 	    {
