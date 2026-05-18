@@ -1477,3 +1477,195 @@ int curricolum()
 			
 return 0;			
 } 	  					
+
+
+char sm;
+int s;
+int q;
+int t;
+float ts;
+float tss;
+
+						cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					_sleep(1000);
+	  					 system("cls");
+	  					 cout<<"\n        000";
+	  					 cout<<"\n  000  0   0 000 ";
+	  					 cout<<"\n 0   0  000 0   0";
+	  					 cout<<"\n  000        000";
+	  					 _sleep(1000);
+	  					 system("cls");
+	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					_sleep(1000);
+	  					 system("cls");
+	  					 cout<<"\n        000";
+	  					 cout<<"\n  000  0   0 000 ";
+	  					 cout<<"\n 0   0  000 0   0";
+	  					 cout<<"\n  000        000";
+	  					_sleep(1000);
+	  					 system("cls"); 
+ 	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					_sleep(1000);
+	  					 system("cls");
+	  					 cout<<"\n        000";
+	  					 cout<<"\n  000  0   0 000 ";
+	  					 cout<<"\n 0   0  000 0   0";
+	  					 cout<<"\n  000        000";
+	  					 _sleep(1000);
+	  					 system("cls");
+	  					cout<<"\n  000        000";
+	  					cout<<"\n 0   0  000 0   0";
+	  					cout<<"\n  000  0   0 000";
+	  					cout<<"\n        000";
+	  					system("cls");
+	cout<<"\nBenvenuto nella sezione traders!";
+	cout<<"\n in questa sezione potrai scegliere tra molti traders esperti";
+	cout<<"\n===========================================================================";
+	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
+	cout<<"\n|*************************************************************************|";
+	cout<<"\n|  TRADER NUM1______________                                              |";
+	cout<<"\n|         | Dr. Aris Thorne |                                             |";
+	cout<<"\n|          Ex Astro fisico che ha applicato le sue conoscienze            |";
+	cout<<"\n|            nei grafici.Con lui compri una garanzia!                     |";
+	cout<<"\n|               pero' questo avrà un costo superiore rispetto             |";
+	cout<<"\n|                 ai suoi concorrenti                                     |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|*************************************************************************|";	
+	cout<<"\n|  guadagno stimato--->30%                      costo=20% del guadagno    |";
+	cout<<"\n===========================================================================\n\n\n";
+
+	cout<<"\n===========================================================================";
+	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
+	cout<<"\n|*************************************************************************|";
+	cout<<"\n|  TRADER NUM2______________                                              |";
+	cout<<"\n|         | Viktor  Volkov |                                              |";
+	cout<<"\n|          Viktor è un ex ingegnere aerospaziale che tratta il mercato    |";
+	cout<<"\n|           come un enorme motore meccanico.Per lui, il prezzo di un asset|";
+	cout<<"\n|               non è mai giusto o sbagliato, è solo in ritardo           |";
+	cout<<"\n|                 rispetto alla realtà.                                   |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|*************************************************************************|";	
+	cout<<"\n|  guadagno stimato--->40%                       costo=20% del guadagno   |";
+	cout<<"\n===========================================================================\n\n\n";
+	
+	cout<<"\n===========================================================================";
+	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
+	cout<<"\n|*************************************************************************|";
+	cout<<"\n|  TRADER NUM3______________                                              |";
+	cout<<"\n|            | Elara  Vance |                                             |";
+	cout<<"\n|      Ex campionessa di scacchi trasformatasi in trader ad alta frequenza|";
+	cout<<"\n|               Elara non guarda i grafici nel modo tradizionale;         |";
+	cout<<"\n|                     vede schemi numerici  e asimmetrie di mercato       |";
+	cout<<"\n|                                  prima che si formino.                  |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|                                                                         |";
+	cout<<"\n|*************************************************************************|";	
+	cout<<"\n|  guadagno stimato--->20%                     costo=15% del guadagno     |";
+	cout<<"\n===========================================================================\n\n\n";
+	cout<<"inserisci il numero del trader che vuoi usare";
+	cin>>s;
+	while(s!=1 && s!=2 && s!=3)
+	{
+		cout<<"\nerrore,non e disponibile";
+		cin>>s;
+	}
+	if(s==1)
+	{
+		cout<<"\nhai scelto una garanzia!";
+		cout<<"\nDr. Aris Thorne sta lavorando per te... inserisci la quota che vuoi";
+		cin>>q;
+		while(q>saldor)
+		{
+			cout<<"errore";
+			cin>>q;
+		}
+		int t(q*10/100);
+		
+		cout<<"\nDr. Aris Thorne e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
+		saldor=saldor+t;
+		cout<<"\n ora nel conto hai"<<saldor;
+		
+		
+		
+	}
+	else
+	{
+		if(s==2)
+		{
+	cout<<"\nhai scelto una garanzia!";
+		cout<<"\n Viktor  Volkov sta lavorando per te... inserisci la quota che vuoi";
+		cin>>q;
+		while(q>saldor)
+		{
+			cout<<"errore";
+			cin>>q;
+		}
+		int t(q*20/100);
+		
+		cout<<"\nViktor  Volkov e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
+		saldor=saldor+t;
+		cout<<"\n ora nel conto hai"<<saldor;
+	}
+	else
+	{
+		if(s==3)
+		{
+		
+	cout<<"\nhai scelto una garanzia!";
+		cout<<"\n Elara  Vance sta lavorando per te... inserisci la quota che vuoi";
+		cin>>q;
+		while(q>saldor)
+		{
+			cout<<"errore";
+			cin>>q;
+		}
+		int t(q*5/100);
+		cout<<"\nElara  Vance e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
+		saldor=saldor+t;
+		cout<<"\n ora nel conto hai"<<saldor;	
+	}
+	}
+}
+	cout<<"\n vuoi andare nel menu principale?(s|n)";
+	cin>>sm;		while(sm!='s' && sm!='n')
+	{
+		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
+		cin>>sm;
+	}
+	if(sm=='s')
+	{
+	  menu();
+	}
+	else
+	{
+
+	cout<<"\n arrivederci,alla prossima!";
+	}	
+	return 0;
+}
