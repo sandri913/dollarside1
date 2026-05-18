@@ -20,8 +20,9 @@ string nu1;
 string ncarta1;
 int risposta1;
 float saldovirtuale;
-float saldor;
-float saldonow;
+double saldor;
+double soldiinseriti;
+
 string password2;
 		string nu2;
 		string ncarta2;
@@ -233,7 +234,7 @@ int saldo()
 		cin>>p;
 	}
 	if(p=='s')
-    {
+    {	system("cls");
     	cout<<"\nVolendoli riscattare devi inserire i dati del tuo account";
 	      	cout<<"\nScrivi la Password (solo con lettere)\n";
             cin>>password2;
@@ -256,16 +257,17 @@ int saldo()
             	cout<<"\nerrore controlla la carta\n";
             	cin>>ncarta2;
 			}
-			cout<<"Bene grazie di averci scelto.";
+				system("cls");
 			
-			saldor=saldor+soldiinserire;
+			saldor=saldor+saldovirtuale;
 			cout<<"SALDO="<<saldor;
+			saldovirtuale=saldovirtuale-saldovirtuale;
     	
     }
-	cout<<"\nBenvenuti nella sezione saldo.";
+	
 	cout<<"\n\n\n\n";
     
-    cout<<"Il tuo slado attuale e' di:"<<saldor;
+    
 	
 	cout<<"\n  vuoi guadagnare di piu's|n (vai nella zona traders)";
 	cin>>s;
@@ -408,8 +410,8 @@ cout<<"\n  000        000";
 		string contattare;
 		cout<<"Bene, non ami il rischio, hai scelto bene, pochi guadagni ma poche perdite.\n";
 		cout<<"Inserisci soldi:";
-		cin>>soldiinserire;
-		while(soldiinserire>saldor)
+		cin>>soldiinseriti;
+		while(soldiinseriti>saldor)
 	    {
 	    	cout<<"Attenzione non disponi di questa cifra";
 	    	cin>>soldiinserire;
@@ -419,9 +421,10 @@ cout<<"\n  000        000";
 		float percentuale;
 	    srand(time(0));
 	    percentuale=rand()%99+1;
-	    if(saldom<75)
+	    if(percentuale<75)
 	    {
-	      soldiinserire=soldiinserire*1.25;	
+	    	
+	      soldiinserire=soldiinseriti*1.25;	
 	      cout<<"\nIl mercato ha dato i sui frutti,il saldo e salito, lasciandoti con un reddito di 1.25x in piu.";
 	      cout<<"\nPer ricevere i soldi deve contattare il numero qui sotto.";
 	      cout<<"\n+39 45546781413";
@@ -429,6 +432,10 @@ cout<<"\n  000        000";
 	      
 	      cout<<"\nContattare?(si/no)";
 	      cin>>contattare;
+	      while(contattare!="si"&&contattare!="no")
+	      {
+	      	cout<<"riguarda quello che hai scritto";
+		  }
 	      if(contattare!="si" && contattare!="no")
 	      {
 	      	cout<<"errore";
@@ -472,9 +479,9 @@ cout<<"\n  000        000";
 	    }
 	    else
 	    {
-	    	cout<<"\nI soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
-	    	soldiinserire=soldiinserire-soldiinserire*0,67;
-	    	saldor=saldor+soldiinserire;
+	    	cout<<"\ndei soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
+	    	saldor=saldor-soldiinseriti;
+	    	cout<<"SALDO="<<saldor;
 	}	
 		}
 	cout<<"\n vuoi andare nel menu principale?(s|n)";
@@ -502,21 +509,21 @@ cout<<"\n  000        000";
 		string contattare;
 		cout<<"Sei un amante del rischio vedo... Attento\n";
 		cout<<"Inserisci soldi:";
-		if(soldiinserire>saldor)
+		cin>>soldiinseriti;
+		while(soldiinseriti>saldor)
 	    {
 	    	cout<<"Attenzione non disponi di questa cifra";
+	    	cin>>soldiinserire;
 		}
-		else
-		{
 	
-		cin>>soldiinserire;
+		
 		saldor=saldor-soldiinserire;
 		float percentuale;
 	    srand(time(0));
 	    percentuale=rand()%99+1;
-	    if(saldom<7)
+	    if(percentuale<7)
 	    {
-	      soldiinserire=soldiinserire*10.5;	
+	      soldiinserire=soldiinseriti*10.5;	
 	      cout<<"\nIl mercato ha dato i sui frutti,il saldo e salito, lasciandoti con un reddito di 10.5x in piu.";
 	      cout<<"\nPer ricevere i soldi deve contattare il numero qui sotto.";
 	      cout<<"\n+39 45546781413";
@@ -567,11 +574,11 @@ cout<<"\n  000        000";
 	    }
 	    else
 	    {
-	    	cout<<"\nI soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
-	    	soldiinserire=soldiinserire-soldiinserire*0,67;
-	    	saldor=saldor+soldiinserire;
+	    	cout<<"\ndei soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
+	    	saldor=saldor-soldiinseriti;
+	    	cout<<"SALDO="<<saldor;
 	}	
-		}
+		
 	cout<<"\n vuoi andare nel menu principale?(s|n)";
 	cin>>s;
 			while(s!='s' && s!='n')
@@ -597,8 +604,8 @@ cout<<"\n  000        000";
 		string contattare;
 		cout<<"Bene, non ami il rischio, hai scelto bene, pochi guadagni ma poche perdite.\n";
 		cout<<"Inserisci soldi:";
-		cin>>soldiinserire;
-		while(soldiinserire>saldor)
+		cin>>soldiinseriti;
+		while(soldiinseriti>saldor)
 	    {
 	    	cout<<"Attenzione non disponi di questa cifra";
 	    	cin>>soldiinserire;
@@ -608,9 +615,9 @@ cout<<"\n  000        000";
 		float percentuale;
 	    srand(time(0));
 	    percentuale=rand()%99+1;
-	    if(saldom<75)
+	    if(percentuale<45)
 	    {
-	      soldiinserire=soldiinserire*2.5;	
+	      soldiinserire=soldiinseriti*2.5;	
 	      cout<<"\nIl mercato ha dato i sui frutti,il saldo e salito, lasciandoti con un reddito di 2.5x in piu.";
 	      cout<<"\nPer ricevere i soldi deve contattare il numero qui sotto.";
 	      cout<<"\n+39 45546781413";
@@ -661,9 +668,9 @@ cout<<"\n  000        000";
 	    }
 	    else
 	    {
-	    	cout<<"\nI soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
-	    	soldiinserire=soldiinserire-soldiinserire*0,67;
-	    	saldor=saldor+soldiinserire;
+	    	cout<<"\ndei soldi purtroppo andranno alle merci in cui hai scommesso ,ci dispiace.";
+	    	saldor=saldor-soldiinseriti;
+	    	cout<<"SALDO="<<saldor;
 	}	
 		}
 	cout<<"\n vuoi andare nel menu principale?(s|n)";
@@ -757,7 +764,7 @@ float tss;
 	cout<<"\n|                                                                         |";
 	cout<<"\n|                                                                         |";
 	cout<<"\n|*************************************************************************|";	
-	cout<<"\n|  guadagno stimato--->30%                      costo=20% del guadagno    |";
+	cout<<"\n|  guadagno stimato--->30%                      costo=10% del guadagno    |";
 	cout<<"\n===========================================================================\n\n\n";
 
 	cout<<"\n===========================================================================";
@@ -777,7 +784,7 @@ float tss;
 	cout<<"\n|                                                                         |";
 	cout<<"\n|                                                                         |";
 	cout<<"\n|*************************************************************************|";	
-	cout<<"\n|  guadagno stimato--->40%                       costo=20% del guadagno   |";
+	cout<<"\n|  guadagno stimato--->40%                       costo=20%  del guadagno  |";
 	cout<<"\n===========================================================================\n\n\n";
 	
 	cout<<"\n===========================================================================";
@@ -797,7 +804,7 @@ float tss;
 	cout<<"\n|                                                                         |";
 	cout<<"\n|                                                                         |";
 	cout<<"\n|*************************************************************************|";	
-	cout<<"\n|  guadagno stimato--->20%                     costo=15% del guadagno     |";
+	cout<<"\n|  guadagno stimato--->20%                     costo=5% del guadagno      |";
 	cout<<"\n===========================================================================\n\n\n";
 	cout<<"inserisci il numero del trader che vuoi usare";
 	cin>>s;
@@ -819,8 +826,8 @@ float tss;
 		int t(q*10/100);
 		
 		cout<<"\nDr. Aris Thorne e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
-		float saldorn=saldor+t;
-		cout<<"\n ora nel conto hai"<<saldorn;
+		saldor=saldor+t;
+		cout<<"\n ora nel conto hai"<<saldor;
 		
 		
 		
@@ -840,8 +847,8 @@ float tss;
 		int t(q*20/100);
 		
 		cout<<"\nViktor  Volkov e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
-				float saldorn=saldor-ts;
-		cout<<"\n ora nel conto hai"<<saldorn;
+		saldor=saldor+t;
+		cout<<"\n ora nel conto hai"<<saldor;
 	}
 	else
 	{
@@ -858,8 +865,8 @@ float tss;
 		}
 		int t(q*5/100);
 		cout<<"\nElara  Vance e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
-		float saldorn=saldor-ts;
-		cout<<"\n ora nel conto hai"<<saldorn;	
+		saldor=saldor+t;
+		cout<<"\n ora nel conto hai"<<saldor;	
 	}
 	}
 }
@@ -1029,7 +1036,7 @@ cout<<"\n=======================================================================
 	cout<<"\n===========================================================================================================================|";
     cout<<"\n|  inserisci il numero del lavoro che ti interessa altrimenti inserisci 4 --->";cin>>sl;
     cout<<"\n===========================================================================================================================|\n\n\n";
-	while(sl!=1||sl!=2||sl!=3)
+	while(sl!=1&&sl!=2&&sl!=3)
 	{
 		cout<<"\n errore,inserisci un numero corretto";
 		cin>>sl;
@@ -1040,8 +1047,8 @@ cout<<"\n=======================================================================
 		cout<<"\nLavorerai in robotmaster complimenti!";
 		cout<<"\n ecco l'email per prenotare un colloquio e per portare il curriculum";
 		cout<<"\n robotmastercolloquio@gmail.com";
-		cout<<"\n non hai il curriculum? dicita c per farlo gratuitamente con il nostro software!";
-		cout<<"\n altrimenti dicita n";
+		cout<<"\n non hai il curriculum? digita c per farlo gratuitamente con il nostro software!";
+		cout<<"\n altrimenti digita n";
 		cin>>c;
 		while(c!='c' || c!='c')
 		{
@@ -1061,8 +1068,8 @@ cout<<"\n=======================================================================
 		cout<<"\nLavorerai in alfredo motorparts complimenti!";
 		cout<<"\n ecco l'email per prenotare un colloquio e per portare il curriculum";
 		cout<<"\n alfredomotorpartscolloquio@gmail.com";
-		cout<<"\n non hai il curriculum? dicita c per farlo gratuitamente con il nostro software!";
-		cout<<"\n altrimenti dicita n";
+		cout<<"\n non hai il curriculum? digita c per farlo gratuitamente con il nostro software!";
+		cout<<"\n altrimenti digita n";
 		cin>>c;
 		while(c!='c' || c!='c')
 		{
@@ -1082,8 +1089,8 @@ cout<<"\n=======================================================================
 		cout<<"\nLavorerai in cipside complimenti!";
 		cout<<"\n ecco l'email per prenotare un colloquio e per portare il curriculum";
 		cout<<"\n cipsidecolloquio@gmail.com";
-		cout<<"\n non hai il curriculum? dicita c per farlo gratuitamente con il nostro software!";
-		cout<<"\n altrimenti dicita n";
+		cout<<"\n non hai il curriculum? digita c per farlo gratuitamente con il nostro software!";
+		cout<<"\n altrimenti digita n";
 		cin>>c;
 		while(c!='c' || c!='c')
 		{
@@ -1435,7 +1442,7 @@ int curricolum()
 			getline(cin,d);
 			cout<<"\n inserisci le tue esperienze lavorative, in caso non hai mai lavorato digita nessuna";
 			getline(cin,lav);
-			cout<<"\n inserisci le lingue che conosci(diverse dall'italiano) con il livello affianco se non ne conosci digita nesssuna";
+			cout<<"\n inserisci le lingue che conosci(diverse dall'italiano) con il livello affianco se non ne conosci digita nessuna";
 			getline(cin,ling);
 			cout<<"\n inserisci le tue competenze informatiche";
 			getline(cin,inf);
@@ -1477,195 +1484,3 @@ int curricolum()
 			
 return 0;			
 } 	  					
-
-
-char sm;
-int s;
-int q;
-int t;
-float ts;
-float tss;
-
-						cout<<"\n  000        000";
-	  					cout<<"\n 0   0  000 0   0";
-	  					cout<<"\n  000  0   0 000";
-	  					cout<<"\n        000";
-	  					_sleep(1000);
-	  					 system("cls");
-	  					 cout<<"\n        000";
-	  					 cout<<"\n  000  0   0 000 ";
-	  					 cout<<"\n 0   0  000 0   0";
-	  					 cout<<"\n  000        000";
-	  					 _sleep(1000);
-	  					 system("cls");
-	  					cout<<"\n  000        000";
-	  					cout<<"\n 0   0  000 0   0";
-	  					cout<<"\n  000  0   0 000";
-	  					cout<<"\n        000";
-	  					_sleep(1000);
-	  					 system("cls");
-	  					 cout<<"\n        000";
-	  					 cout<<"\n  000  0   0 000 ";
-	  					 cout<<"\n 0   0  000 0   0";
-	  					 cout<<"\n  000        000";
-	  					_sleep(1000);
-	  					 system("cls"); 
- 	  					cout<<"\n  000        000";
-	  					cout<<"\n 0   0  000 0   0";
-	  					cout<<"\n  000  0   0 000";
-	  					cout<<"\n        000";
-	  					_sleep(1000);
-	  					 system("cls");
-	  					 cout<<"\n        000";
-	  					 cout<<"\n  000  0   0 000 ";
-	  					 cout<<"\n 0   0  000 0   0";
-	  					 cout<<"\n  000        000";
-	  					 _sleep(1000);
-	  					 system("cls");
-	  					cout<<"\n  000        000";
-	  					cout<<"\n 0   0  000 0   0";
-	  					cout<<"\n  000  0   0 000";
-	  					cout<<"\n        000";
-	  					system("cls");
-	cout<<"\nBenvenuto nella sezione traders!";
-	cout<<"\n in questa sezione potrai scegliere tra molti traders esperti";
-	cout<<"\n===========================================================================";
-	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
-	cout<<"\n|*************************************************************************|";
-	cout<<"\n|  TRADER NUM1______________                                              |";
-	cout<<"\n|         | Dr. Aris Thorne |                                             |";
-	cout<<"\n|          Ex Astro fisico che ha applicato le sue conoscienze            |";
-	cout<<"\n|            nei grafici.Con lui compri una garanzia!                     |";
-	cout<<"\n|               pero' questo avrà un costo superiore rispetto             |";
-	cout<<"\n|                 ai suoi concorrenti                                     |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|*************************************************************************|";	
-	cout<<"\n|  guadagno stimato--->30%                      costo=20% del guadagno    |";
-	cout<<"\n===========================================================================\n\n\n";
-
-	cout<<"\n===========================================================================";
-	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
-	cout<<"\n|*************************************************************************|";
-	cout<<"\n|  TRADER NUM2______________                                              |";
-	cout<<"\n|         | Viktor  Volkov |                                              |";
-	cout<<"\n|          Viktor è un ex ingegnere aerospaziale che tratta il mercato    |";
-	cout<<"\n|           come un enorme motore meccanico.Per lui, il prezzo di un asset|";
-	cout<<"\n|               non è mai giusto o sbagliato, è solo in ritardo           |";
-	cout<<"\n|                 rispetto alla realtà.                                   |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|*************************************************************************|";	
-	cout<<"\n|  guadagno stimato--->40%                       costo=20% del guadagno   |";
-	cout<<"\n===========================================================================\n\n\n";
-	
-	cout<<"\n===========================================================================";
-	cout<<"\n|$DOLLARSIDE$---->traders                                                 |";
-	cout<<"\n|*************************************************************************|";
-	cout<<"\n|  TRADER NUM3______________                                              |";
-	cout<<"\n|            | Elara  Vance |                                             |";
-	cout<<"\n|      Ex campionessa di scacchi trasformatasi in trader ad alta frequenza|";
-	cout<<"\n|               Elara non guarda i grafici nel modo tradizionale;         |";
-	cout<<"\n|                     vede schemi numerici  e asimmetrie di mercato       |";
-	cout<<"\n|                                  prima che si formino.                  |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|                                                                         |";
-	cout<<"\n|*************************************************************************|";	
-	cout<<"\n|  guadagno stimato--->20%                     costo=15% del guadagno     |";
-	cout<<"\n===========================================================================\n\n\n";
-	cout<<"inserisci il numero del trader che vuoi usare";
-	cin>>s;
-	while(s!=1 && s!=2 && s!=3)
-	{
-		cout<<"\nerrore,non e disponibile";
-		cin>>s;
-	}
-	if(s==1)
-	{
-		cout<<"\nhai scelto una garanzia!";
-		cout<<"\nDr. Aris Thorne sta lavorando per te... inserisci la quota che vuoi";
-		cin>>q;
-		while(q>saldor)
-		{
-			cout<<"errore";
-			cin>>q;
-		}
-		int t(q*10/100);
-		
-		cout<<"\nDr. Aris Thorne e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
-		saldor=saldor+t;
-		cout<<"\n ora nel conto hai"<<saldor;
-		
-		
-		
-	}
-	else
-	{
-		if(s==2)
-		{
-	cout<<"\nhai scelto una garanzia!";
-		cout<<"\n Viktor  Volkov sta lavorando per te... inserisci la quota che vuoi";
-		cin>>q;
-		while(q>saldor)
-		{
-			cout<<"errore";
-			cin>>q;
-		}
-		int t(q*20/100);
-		
-		cout<<"\nViktor  Volkov e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
-		saldor=saldor+t;
-		cout<<"\n ora nel conto hai"<<saldor;
-	}
-	else
-	{
-		if(s==3)
-		{
-		
-	cout<<"\nhai scelto una garanzia!";
-		cout<<"\n Elara  Vance sta lavorando per te... inserisci la quota che vuoi";
-		cin>>q;
-		while(q>saldor)
-		{
-			cout<<"errore";
-			cin>>q;
-		}
-		int t(q*5/100);
-		cout<<"\nElara  Vance e riuscito a fare "<<t<<"euro, si e' gia' preso la sua parte";
-		saldor=saldor+t;
-		cout<<"\n ora nel conto hai"<<saldor;	
-	}
-	}
-}
-	cout<<"\n vuoi andare nel menu principale?(s|n)";
-	cin>>sm;		while(sm!='s' && sm!='n')
-	{
-		cout<<"\nerrore,inserisci s per cambiare sezione altrimenti n";
-		cin>>sm;
-	}
-	if(sm=='s')
-	{
-	  menu();
-	}
-	else
-	{
-
-	cout<<"\n arrivederci,alla prossima!";
-	}	
-	return 0;
-}
